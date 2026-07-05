@@ -1,8 +1,9 @@
 
 # Hackathon - NMR Challenge
 
-[![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/ML4SCI/DeepLearnHackathon/blob/main/NMRSpinChallenge/Hackathon_NMR_Challenge_July2024.ipynb)
+[![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/ML4SCI/DeepLearnHackathon/blob/main/NMRSpinChallenge/Hackathon_NMR_Challenge.ipynb)
 
+> **2026 material note:** This challenge and its datasets are intentionally reused from the version introduced in 2024 and verified again for the 2025 event. The year-neutral notebook name reflects that the same material remains valid for DeepLearn 2026.
 
 ### Problem Statement
 
@@ -85,11 +86,11 @@ to measure during an applied "pulse", but there is no external pulse during the 
 
 Here is a typical curve for the time-dependent magnetization $M(t)$ for a <br> spin-echo in most materials:
 
-![standard_spinecho.png](https://raw.githubusercontent.com/ML4SCI/DeepLearnHackathon/main/NMRSpinChallenge/standard_spinecho.png)
+![standard_spinecho.png](standard_spinecho.png)
 
 Sometimes, a more complicated curve can occur, such as:
 
-![coupled_echo.png](https://raw.githubusercontent.com/ML4SCI/DeepLearnHackathon/main/NMRSpinChallenge/coupled_echo.png)
+![coupled_echo.png](coupled_echo.png)
 
 This more complicated structure has been caused by spin-spin interactions <br>
 between the precessing nuclear spins. Normally, each spin precesses in a<br> uniform way irrespective of the rest of the nuclei in the material. In this <br>
