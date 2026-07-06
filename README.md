@@ -1,3 +1,5 @@
+![Deeplearn Banner](poster_2026.png)
+
 We are pleased to announce the **DeepLearn 2026 Hackathon Competition**, held as part of [DeepLearn 2026](https://deeplearn.irdta.eu/2026/) in **Orléans, France, from July 20–24, 2026**. The competition is open to all DeepLearn participants and focuses on applying **machine learning** techniques to realistic challenges from science and the humanities.
 
 Anyone interested in learning more about machine learning and trying their hand at the competition is welcome. Participants are encouraged to self-organize into small teams or work independently on one or more challenges. Work can be completed on the participants' own schedules.
