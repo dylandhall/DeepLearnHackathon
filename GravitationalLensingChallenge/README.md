@@ -1,6 +1,6 @@
 # Strong Lensing Challenge
 
-![Lensing illustration](https://github.com/ML4SCI/DeepLearnHackathon/blob/main/GravitationalLensingChallenge/gitimage.jpg)
+![Lensing illustration](gitimage.jpg)
 
 > Illustration by Sandbox Studio, Chicago with Ana Kova
 
@@ -54,11 +54,11 @@ You can use the example notebooks provided in this repository as templates for y
 
 #### A. Multi-Class Classification
 
-[![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github//pranath-reddy/DeepLearnHackathon/blob/main/GravitationalLensingChallenge/StrongLensingChallenge-Classification.ipynb)
+[![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/ML4SCI/DeepLearnHackathon/blob/main/GravitationalLensingChallenge/StrongLensingChallenge_Classification.ipynb)
 
 #### B. Image Super-Resolution
 
-[![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github//pranath-reddy/DeepLearnHackathon/blob/main/GravitationalLensingChallenge/StrongLensingChallenge-SuperRes.ipynb)
+[![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/ML4SCI/DeepLearnHackathon/blob/main/GravitationalLensingChallenge/StrongLensingChallenge_SuperRes.ipynb)
 
 ## Getting Started
 

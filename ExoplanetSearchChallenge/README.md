@@ -1,7 +1,7 @@
 # Exoplanet Search Challenge:
 ## Detecting Exoplanets in Protoplanetary Disks
 
-![HL Tau](https://github.com/ML4SCI/DeepLearnHackathon/blob/main/ExoplanetSearchChallenge/hl_tau_ALMA.jpeg)
+![HL Tau](hl_tau_ALMA.jpeg)
 
 Credit: ALMA (ESO/NAOJ/NRAO)
 

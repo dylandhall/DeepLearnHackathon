@@ -1,12 +1,12 @@
 # RenAIssance: OCR for Seventeenth Century Spanish Texts
 <!-- ![coverImage](./cover.webp) -->
 <p align="center">
-<img src="https://raw.githubusercontent.com/ML4SCI/DeepLearnHackathon/main/NLPRenaissanceChallenge/images/cover.webp" width="400">
+<img src="images/cover.webp" width="400">
 </p>
 
 ## Description
 RenAIssance project encompasses the use of optical character recognition (OCR) necessary to digitize text sources that have not yet been targeted by existing tools. Its purpose is to find ways to apply machine learning techniques to make OCR possible on a variety of materials that have never been digitized before. This competition focuses on applying AI to recognize text in Spanish printed sources from the seventeenth century, an area underserved by current OCR tools. 
-**For further reference, you can go through this presentation:** [Description of the file](https://github.com/ML4SCI/DeepLearnHackathon/blob/main/NLPRenaissanceChallenge/data/Hackathon%20training%20-%20print%20irregularities.pptx)
+**For further reference, you can go through this presentation:** [Description of the file](data/Hackathon%20training%20-%20print%20irregularities.pptx)
  
 
 Transliteration of text from centuries-old works represents a research area that is underserved by current tools, such as Adobe Acrobat’s OCR. While these resources can perform text recognition from clearly printed modern sources, they are incapable of extracting textual data from early forms of print, much less manuscripts.
