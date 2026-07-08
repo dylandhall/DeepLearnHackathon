@@ -22,10 +22,8 @@ The challenges will be released **two weeks before the school, on Monday, July 6
 There are seven main challenges:
 
 - [Higgs Boson Challenge](HiggsBosonClassificationChallenge/) (classification)
-- [Particle Images Challenge](ParticleImagesChallenge/) (classification, computer vision)
 - [Strong Lensing Challenge](GravitationalLensingChallenge/) (multi-class classification, super-resolution, computer vision)
 - [RenAIssance Challenge](NLPRenaissanceChallenge/) (NLP, transcription)
-- [NMR Spin Challenge](NMRSpinChallenge/) (multi-target regression)
 - [Exoplanet Search Challenge](ExoplanetSearchChallenge/) (classification, image analysis)
 - [Quantum Machine Learning Challenge](QMLChallenge/) (anomaly detection, quantum computing)
 
