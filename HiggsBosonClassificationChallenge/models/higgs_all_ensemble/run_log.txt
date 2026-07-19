@@ -1,0 +1,41 @@
+Using device: cuda
+Loading cached array from ./higgs_cache.npy ...
+feature_set=all in_dim=28 target_trials=1 top_k=6 seeds=2
+
+/home/dylan/code/DeepLearnHackathon/HiggsBosonClassificationChallenge/higgs_hpo_ensemble.py:135: ExperimentalWarning: Argument ``multivariate`` is an experimental feature. The interface can change in the future.
+  sampler=optuna.samplers.TPESampler(multivariate=True, seed=0),
+[Phase 1] study has 35 completed trials
+[Phase 1] best val AUC so far: 0.8849
+
+[Phase 2] selected 6 diverse configs (by val AUC):
+    val=0.8849  [1024, 1024, 1024, 1024, 1024, 1024] gelu do=0.15/all=True lr=3.8e-03
+    val=0.8836  [1024, 1024, 1024, 1024, 1024] gelu do=0.17/all=True lr=3.7e-03
+    val=0.8824  [1024, 512, 256, 128, 64] gelu do=0.03/all=True lr=2.8e-03
+    val=0.8823  [1024, 1024, 1024, 1024, 1024] gelu do=0.15/all=False lr=3.8e-03
+    val=0.8822  [1024, 1024, 1024, 1024, 1024] relu do=0.00/all=True lr=3.5e-03
+    val=0.8821  [1024, 1024, 1024, 1024] gelu do=0.08/all=True lr=2.4e-03
+
+[Phase 3] retraining 6 configs x 2 seeds = 12 members  ->  saving to models/higgs_all_ensemble/
+    member  1: single_test=0.8851 | ENSEMBLE_test=0.8851
+    member  2: single_test=0.8841 | ENSEMBLE_test=0.8866
+    member  3: single_test=0.8843 | ENSEMBLE_test=0.8871
+    member  4: single_test=0.8845 | ENSEMBLE_test=0.8874
+    member  5: single_test=0.8826 | ENSEMBLE_test=0.8881
+    member  6: single_test=0.8829 | ENSEMBLE_test=0.8886
+    member  7: single_test=0.8827 | ENSEMBLE_test=0.8892
+    member  8: single_test=0.8831 | ENSEMBLE_test=0.8897
+    member  9: single_test=0.8828 | ENSEMBLE_test=0.8900
+    member 10: single_test=0.8824 | ENSEMBLE_test=0.8902
+    member 11: single_test=0.8822 | ENSEMBLE_test=0.8902
+    member 12: single_test=0.8819 | ENSEMBLE_test=0.8900
+
+================================================================
+HPO+ENSEMBLE RESULT  (feature_set=all)
+  best single tuned model   test=0.8851
+  full ensemble (12 members) test=0.8900
+  paper deep-net best        test=0.885
+  -> CLEARS 0.885
+
+  saved 12 models + manifest.json + test_probs.npy to models/higgs_all_ensemble/
+  reload & reproduce (no retraining):  python higgs_predict.py models/higgs_all_ensemble
+================================================================

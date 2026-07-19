@@ -1,0 +1,261 @@
+{
+  "feature_set": "all",
+  "in_dim": 28,
+  "scaler_mean": [
+    0.9914653897285461,
+    5.738472464145161e-05,
+    0.00013567571295425296,
+    0.9984734058380127,
+    5.8722758694784716e-05,
+    0.9908444285392761,
+    2.3591039280290715e-05,
+    -1.0988415851898026e-05,
+    1.0000698566436768,
+    0.9926167726516724,
+    7.983927935129032e-05,
+    -8.612813689978793e-05,
+    0.9999054074287415,
+    0.9922490119934082,
+    7.445324445143342e-05,
+    7.707776967436075e-05,
+    1.0000520944595337,
+    0.986015796661377,
+    7.486961840186268e-05,
+    -3.192620351910591e-05,
+    0.9998595714569092,
+    1.0342806577682495,
+    1.0247957706451416,
+    1.050553798675537,
+    1.0097204446792603,
+    0.9728903770446777,
+    1.0329593420028687,
+    0.9597433805465698
+  ],
+  "scaler_std": [
+    0.5653259754180908,
+    1.0087915658950806,
+    1.0063480138778687,
+    0.5999688506126404,
+    1.0062965154647827,
+    0.47490477561950684,
+    1.0091612339019775,
+    1.0059059858322144,
+    1.0278171300888062,
+    0.4999037981033325,
+    1.0092525482177734,
+    1.006101369857788,
+    1.0493683815002441,
+    0.4875921905040741,
+    1.0087196826934814,
+    1.0063499212265015,
+    1.1936743259429932,
+    0.50565105676651,
+    1.0077617168426514,
+    1.0063867568969727,
+    1.4001202583312988,
+    0.6742203235626221,
+    0.3806433379650116,
+    0.1645640879869461,
+    0.3973917067050934,
+    0.5251791477203369,
+    0.3650464713573456,
+    0.31316158175468445
+  ],
+  "epochs_final": 35,
+  "best_single_test_auc": 0.8851,
+  "ensemble_test_auc": 0.89,
+  "members": [
+    {
+      "file": "member_00.pt",
+      "hidden": [
+        1024,
+        1024,
+        1024,
+        1024,
+        1024,
+        1024
+      ],
+      "activation": "gelu",
+      "batchnorm": true,
+      "dropout": 0.15449611845654712,
+      "dropout_all_layers": true,
+      "seed": 0,
+      "single_test_auc": 0.8851
+    },
+    {
+      "file": "member_01.pt",
+      "hidden": [
+        1024,
+        1024,
+        1024,
+        1024,
+        1024,
+        1024
+      ],
+      "activation": "gelu",
+      "batchnorm": true,
+      "dropout": 0.15449611845654712,
+      "dropout_all_layers": true,
+      "seed": 1,
+      "single_test_auc": 0.8841
+    },
+    {
+      "file": "member_02.pt",
+      "hidden": [
+        1024,
+        1024,
+        1024,
+        1024,
+        1024
+      ],
+      "activation": "gelu",
+      "batchnorm": true,
+      "dropout": 0.17131155039117205,
+      "dropout_all_layers": true,
+      "seed": 0,
+      "single_test_auc": 0.8843
+    },
+    {
+      "file": "member_03.pt",
+      "hidden": [
+        1024,
+        1024,
+        1024,
+        1024,
+        1024
+      ],
+      "activation": "gelu",
+      "batchnorm": true,
+      "dropout": 0.17131155039117205,
+      "dropout_all_layers": true,
+      "seed": 1,
+      "single_test_auc": 0.8845
+    },
+    {
+      "file": "member_04.pt",
+      "hidden": [
+        1024,
+        512,
+        256,
+        128,
+        64
+      ],
+      "activation": "gelu",
+      "batchnorm": true,
+      "dropout": 0.03111697463423836,
+      "dropout_all_layers": true,
+      "seed": 0,
+      "single_test_auc": 0.8826
+    },
+    {
+      "file": "member_05.pt",
+      "hidden": [
+        1024,
+        512,
+        256,
+        128,
+        64
+      ],
+      "activation": "gelu",
+      "batchnorm": true,
+      "dropout": 0.03111697463423836,
+      "dropout_all_layers": true,
+      "seed": 1,
+      "single_test_auc": 0.8829
+    },
+    {
+      "file": "member_06.pt",
+      "hidden": [
+        1024,
+        1024,
+        1024,
+        1024,
+        1024
+      ],
+      "activation": "gelu",
+      "batchnorm": true,
+      "dropout": 0.1464453380664337,
+      "dropout_all_layers": false,
+      "seed": 0,
+      "single_test_auc": 0.8827
+    },
+    {
+      "file": "member_07.pt",
+      "hidden": [
+        1024,
+        1024,
+        1024,
+        1024,
+        1024
+      ],
+      "activation": "gelu",
+      "batchnorm": true,
+      "dropout": 0.1464453380664337,
+      "dropout_all_layers": false,
+      "seed": 1,
+      "single_test_auc": 0.8831
+    },
+    {
+      "file": "member_08.pt",
+      "hidden": [
+        1024,
+        1024,
+        1024,
+        1024,
+        1024
+      ],
+      "activation": "relu",
+      "batchnorm": true,
+      "dropout": 0.004849042343007676,
+      "dropout_all_layers": true,
+      "seed": 0,
+      "single_test_auc": 0.8828
+    },
+    {
+      "file": "member_09.pt",
+      "hidden": [
+        1024,
+        1024,
+        1024,
+        1024,
+        1024
+      ],
+      "activation": "relu",
+      "batchnorm": true,
+      "dropout": 0.004849042343007676,
+      "dropout_all_layers": true,
+      "seed": 1,
+      "single_test_auc": 0.8824
+    },
+    {
+      "file": "member_10.pt",
+      "hidden": [
+        1024,
+        1024,
+        1024,
+        1024
+      ],
+      "activation": "gelu",
+      "batchnorm": true,
+      "dropout": 0.08114013015915453,
+      "dropout_all_layers": true,
+      "seed": 0,
+      "single_test_auc": 0.8822
+    },
+    {
+      "file": "member_11.pt",
+      "hidden": [
+        1024,
+        1024,
+        1024,
+        1024
+      ],
+      "activation": "gelu",
+      "batchnorm": true,
+      "dropout": 0.08114013015915453,
+      "dropout_all_layers": true,
+      "seed": 1,
+      "single_test_auc": 0.8819
+    }
+  ]
+}

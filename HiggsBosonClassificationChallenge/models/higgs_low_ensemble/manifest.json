@@ -1,0 +1,257 @@
+{
+  "feature_set": "low",
+  "in_dim": 21,
+  "scaler_mean": [
+    0.9914653897285461,
+    5.738472464145161e-05,
+    0.00013567571295425296,
+    0.9984734058380127,
+    5.8722758694784716e-05,
+    0.9908444285392761,
+    2.3591039280290715e-05,
+    -1.0988415851898026e-05,
+    1.0000698566436768,
+    0.9926167726516724,
+    7.983927935129032e-05,
+    -8.612813689978793e-05,
+    0.9999054074287415,
+    0.9922490119934082,
+    7.445324445143342e-05,
+    7.707776967436075e-05,
+    1.0000520944595337,
+    0.986015796661377,
+    7.486961840186268e-05,
+    -3.192620351910591e-05,
+    0.9998595714569092
+  ],
+  "scaler_std": [
+    0.5653259754180908,
+    1.0087915658950806,
+    1.0063480138778687,
+    0.5999688506126404,
+    1.0062965154647827,
+    0.47490477561950684,
+    1.0091612339019775,
+    1.0059059858322144,
+    1.0278171300888062,
+    0.4999037981033325,
+    1.0092525482177734,
+    1.006101369857788,
+    1.0493683815002441,
+    0.4875921905040741,
+    1.0087196826934814,
+    1.0063499212265015,
+    1.1936743259429932,
+    0.50565105676651,
+    1.0077617168426514,
+    1.0063867568969727,
+    1.4001202583312988
+  ],
+  "epochs_final": 35,
+  "best_single_test_auc": 0.8908,
+  "ensemble_test_auc": 0.8928,
+  "members": [
+    {
+      "file": "member_00.pt",
+      "hidden": [
+        1024,
+        1024,
+        1024,
+        1024,
+        1024,
+        1024
+      ],
+      "activation": "gelu",
+      "batchnorm": true,
+      "dropout": 0.15449611845654712,
+      "dropout_all_layers": true,
+      "seed": 0,
+      "single_test_auc": 0.8905
+    },
+    {
+      "file": "member_01.pt",
+      "hidden": [
+        1024,
+        1024,
+        1024,
+        1024,
+        1024,
+        1024
+      ],
+      "activation": "gelu",
+      "batchnorm": true,
+      "dropout": 0.15449611845654712,
+      "dropout_all_layers": true,
+      "seed": 1,
+      "single_test_auc": 0.8908
+    },
+    {
+      "file": "member_02.pt",
+      "hidden": [
+        640,
+        640,
+        640,
+        640,
+        640,
+        640
+      ],
+      "activation": "gelu",
+      "batchnorm": true,
+      "dropout": 0.14548430837704904,
+      "dropout_all_layers": true,
+      "seed": 0,
+      "single_test_auc": 0.8884
+    },
+    {
+      "file": "member_03.pt",
+      "hidden": [
+        640,
+        640,
+        640,
+        640,
+        640,
+        640
+      ],
+      "activation": "gelu",
+      "batchnorm": true,
+      "dropout": 0.14548430837704904,
+      "dropout_all_layers": true,
+      "seed": 1,
+      "single_test_auc": 0.8885
+    },
+    {
+      "file": "member_04.pt",
+      "hidden": [
+        1024,
+        1024,
+        1024,
+        1024,
+        1024
+      ],
+      "activation": "gelu",
+      "batchnorm": true,
+      "dropout": 0.1025186278853007,
+      "dropout_all_layers": true,
+      "seed": 0,
+      "single_test_auc": 0.8866
+    },
+    {
+      "file": "member_05.pt",
+      "hidden": [
+        1024,
+        1024,
+        1024,
+        1024,
+        1024
+      ],
+      "activation": "gelu",
+      "batchnorm": true,
+      "dropout": 0.1025186278853007,
+      "dropout_all_layers": true,
+      "seed": 1,
+      "single_test_auc": 0.8867
+    },
+    {
+      "file": "member_06.pt",
+      "hidden": [
+        768,
+        768,
+        768,
+        768,
+        768,
+        768
+      ],
+      "activation": "gelu",
+      "batchnorm": true,
+      "dropout": 0.21010922840793556,
+      "dropout_all_layers": true,
+      "seed": 0,
+      "single_test_auc": 0.8876
+    },
+    {
+      "file": "member_07.pt",
+      "hidden": [
+        768,
+        768,
+        768,
+        768,
+        768,
+        768
+      ],
+      "activation": "gelu",
+      "batchnorm": true,
+      "dropout": 0.21010922840793556,
+      "dropout_all_layers": true,
+      "seed": 1,
+      "single_test_auc": 0.8876
+    },
+    {
+      "file": "member_08.pt",
+      "hidden": [
+        1024,
+        1024,
+        1024,
+        1024,
+        1024,
+        1024
+      ],
+      "activation": "relu",
+      "batchnorm": true,
+      "dropout": 0.2198738489634479,
+      "dropout_all_layers": false,
+      "seed": 0,
+      "single_test_auc": 0.8823
+    },
+    {
+      "file": "member_09.pt",
+      "hidden": [
+        1024,
+        1024,
+        1024,
+        1024,
+        1024,
+        1024
+      ],
+      "activation": "relu",
+      "batchnorm": true,
+      "dropout": 0.2198738489634479,
+      "dropout_all_layers": false,
+      "seed": 1,
+      "single_test_auc": 0.8833
+    },
+    {
+      "file": "member_10.pt",
+      "hidden": [
+        1024,
+        1024,
+        1024,
+        1024,
+        1024,
+        1024
+      ],
+      "activation": "gelu",
+      "batchnorm": true,
+      "dropout": 0.23302980533964168,
+      "dropout_all_layers": false,
+      "seed": 0,
+      "single_test_auc": 0.8821
+    },
+    {
+      "file": "member_11.pt",
+      "hidden": [
+        1024,
+        1024,
+        1024,
+        1024,
+        1024,
+        1024
+      ],
+      "activation": "gelu",
+      "batchnorm": true,
+      "dropout": 0.23302980533964168,
+      "dropout_all_layers": false,
+      "seed": 1,
+      "single_test_auc": 0.882
+    }
+  ]
+}
