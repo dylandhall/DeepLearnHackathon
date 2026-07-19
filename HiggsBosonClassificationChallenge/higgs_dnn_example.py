@@ -162,6 +162,8 @@ def standardize(X_train, *others):
 # --------------------------------------------------------------------------
 # 2.  THE MODEL  (this is the "multiple-layer DNN + dropout" the README asks for)
 # --------------------------------------------------------------------------
+
+activation_types = {"relu": nn.ReLU, "tanh": nn.Tanh, "gelu": nn.GELU}
 class HiggsMLP(nn.Module):
     """A configurable multi-layer perceptron for binary classification.
 
@@ -172,14 +174,14 @@ class HiggsMLP(nn.Module):
     """
 
     def __init__(self,
-                 in_dim,
+                 in_dim: int,
                  hidden_layers: list[int],
-                 activation: str= "relu",
-                 batchnorm: bool= True,
-                 dropout: float=0.5,
+                 activation: str = "relu",
+                 batchnorm: bool = True,
+                 dropout: float= 0.5,
                  dropout_all_layers: bool = False):
         super().__init__()
-        act_layer = {"relu": nn.ReLU, "tanh": nn.Tanh, "gelu": nn.GELU}[activation]
+        act_layer = activation_types[activation]
 
         layers = []
         prev = in_dim
