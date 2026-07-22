@@ -1,0 +1,19 @@
+{
+  "trial": 6,
+  "depth": 4,
+  "base_width": 512,
+  "shape": "pyramid",
+  "hidden_layers": [
+    512,
+    256,
+    128,
+    64
+  ],
+  "act": "gelu",
+  "dropout": 0.10800318927686595,
+  "dropout_all": 0.11027910331838923,
+  "max_lr": 0.0037957292549555526,
+  "weight_decay": 5.575186893674786e-06,
+  "batch": 16384,
+  "auc": 0.8735140031285394
+}

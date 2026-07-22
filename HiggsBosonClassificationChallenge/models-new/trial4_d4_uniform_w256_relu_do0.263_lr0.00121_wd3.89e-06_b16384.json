@@ -1,0 +1,18 @@
+{
+  "trial": 4,
+  "depth": 4,
+  "base_width": 256,
+  "shape": "uniform",
+  "hidden_layers": [
+    256,
+    256,
+    256,
+    256
+  ],
+  "act": "relu",
+  "dropout": 0.2625318357861094,
+  "max_lr": 0.0012111402197396732,
+  "weight_decay": 3.888186473153664e-06,
+  "batch": 16384,
+  "auc": 0.8771476470602348
+}

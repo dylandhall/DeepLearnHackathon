@@ -1,0 +1,18 @@
+{
+  "trial": 8,
+  "depth": 3,
+  "base_width": 384,
+  "shape": "pyramid",
+  "hidden_layers": [
+    384,
+    192,
+    96
+  ],
+  "act": "relu",
+  "dropout": 0.26128032794285344,
+  "dropout_all": 0.09781549050025333,
+  "max_lr": 0.0018186108571027946,
+  "weight_decay": 0.0004893727555349511,
+  "batch": 32768,
+  "auc": 0.8498980544664549
+}

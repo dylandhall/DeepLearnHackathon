@@ -1,0 +1,18 @@
+{
+  "trial": 13,
+  "depth": 4,
+  "base_width": 384,
+  "shape": "uniform",
+  "hidden_layers": [
+    384,
+    384,
+    384,
+    384
+  ],
+  "act": "gelu",
+  "dropout": 0.3819373836950428,
+  "max_lr": 0.0020274764470436784,
+  "weight_decay": 1.7395574870858434e-05,
+  "batch": 8192,
+  "auc": 0.8796969293288094
+}
