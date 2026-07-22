@@ -1,0 +1,13 @@
+best of the best method:
+* produce an in-memory array of all candidate models x prediction on training rows
+
+either
+* use google ortools to select the best combo to minimise errors
+  * constraint-based method
+* seed initial collection of models
+  * swap 50% randomly, rate, record
+  * save last best combo
+  * iterate until no improvement for x
+  * reduce % of randomly swapped and loop, eg 50-25-15-10-5
+
+record best combo of models
