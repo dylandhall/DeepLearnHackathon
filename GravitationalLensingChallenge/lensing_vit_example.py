@@ -8,13 +8,15 @@ Transformer (ViT) is visible in plain PyTorch, no library magic.
 Task: classify a (1, 64, 64) simulated strong-lensing image into one of 3 dark
 matter substructure classes:  axion  |  cdm  |  no (smooth / no substructure).
 
-Two models are included so you can see the jump the transformer buys you:
-  --model mlp   a "basic DNN": flatten the image -> a few Linear layers   (the baseline)
-  --model vit   the same task with a minimal Vision Transformer           (the point)
+Three models are included so you can see the jump the transformer buys you:
+  --model mlp      a "basic DNN": flatten the image -> two Linear layers    (the baseline)
+  --model deepmlp  the same DNN, but with --layers configurable hidden layers (depth alone)
+  --model vit      the same task with a minimal Vision Transformer          (the point)
 
 Usage:
     python lensing_vit_example.py --model vit          # train the ViT (default)
     python lensing_vit_example.py --model mlp          # train the MLP baseline
+    python lensing_vit_example.py --model deepmlp --layers 4   # a deeper MLP baseline
     python lensing_vit_example.py --model vit --epochs 30 --no-augment
 
 Everything (data, both models, train loop, metrics) lives in this one file.
@@ -103,6 +105,26 @@ class TinyMLP(nn.Module):
             nn.Linear(hidden, hidden), nn.BatchNorm1d(hidden), nn.ReLU(), nn.Dropout(dropout),
             nn.Linear(hidden, n_classes),
         )
+
+    def forward(self, x):
+        return self.net(x)
+
+
+class DeepMLP(nn.Module):
+    """Same structure as TinyMLP, but the number of hidden layers is a knob instead of a
+    hardcoded two. We stack `n_layers` identical Linear->BatchNorm->ReLU->Dropout blocks
+    (n_layers=2 is exactly TinyMLP), then a final Linear to the 3 logits. Turn --layers up
+    to see that depth alone, with no 2D structure and no attention, buys the baseline little."""
+
+    def __init__(self, in_pixels=64 * 64, hidden=512, n_classes=3, dropout=0.3, n_layers=2):
+        super().__init__()
+        layers = [nn.Flatten()]
+        d_in = in_pixels
+        for _ in range(n_layers):
+            layers += [nn.Linear(d_in, hidden), nn.BatchNorm1d(hidden), nn.ReLU(), nn.Dropout(dropout)]
+            d_in = hidden                              # every layer after the first sees `hidden` inputs
+        layers += [nn.Linear(d_in, n_classes)]         # d_in == in_pixels only if n_layers == 0
+        self.net = nn.Sequential(*layers)
 
     def forward(self, x):
         return self.net(x)
@@ -282,9 +304,11 @@ def train(model, data, epochs=25, batch=256, lr=1e-3, augment=True):
     return best_auc
 
 
-def build_model(name):
+def build_model(name, layers=2):
     if name == "mlp":
         return TinyMLP()
+    if name == "deepmlp":
+        return DeepMLP(n_layers=layers)
     if name == "vit":
         return MinimalViT()
     raise ValueError(name)
@@ -292,7 +316,8 @@ def build_model(name):
 
 def main():
     ap = argparse.ArgumentParser()
-    ap.add_argument("--model", choices=["mlp", "vit"], default="vit")
+    ap.add_argument("--model", choices=["mlp", "deepmlp", "vit"], default="vit")
+    ap.add_argument("--layers", type=int, default=2, help="hidden layers for --model deepmlp")
     ap.add_argument("--epochs", type=int, default=25)
     ap.add_argument("--batch", type=int, default=256)
     ap.add_argument("--lr", type=float, default=1e-3)
@@ -302,7 +327,7 @@ def main():
     torch.manual_seed(0)
     print(f"device: {DEVICE}   model: {args.model}")
     data = get_data()
-    model = build_model(args.model)
+    model = build_model(args.model, layers=args.layers)
     train(model, data, epochs=args.epochs, batch=args.batch, lr=args.lr,
           augment=not args.no_augment)
 
